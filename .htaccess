@@ -1,0 +1,172 @@
+# ============================================
+# 301 Redirects - Directory Restructure
+# ============================================
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    
+    # Landing Pages Redirects
+    RewriteRule ^landing_anfitrionas_lima\.html$ /landing/anfitrionas_lima.html [R=301,L]
+    RewriteRule ^landing_anfitrionas_peru\.html$ /landing/anfitrionas_peru.html [R=301,L]
+    RewriteRule ^landing_anfitrionas_peru_mobile_optimized\.html$ /landing/anfitrionas_peru_mobile_optimized.html [R=301,L]
+    RewriteRule ^landing_anfitrionas_trujillo\.html$ /landing/anfitrionas_trujillo.html [R=301,L]
+    RewriteRule ^landing_promotoras_arequipa\.html$ /landing/promotoras_arequipa.html [R=301,L]
+    RewriteRule ^landing_promotoras_btl\.html$ /landing/promotoras_btl.html [R=301,L]
+    RewriteRule ^landing_protocolo_vip\.html$ /landing/protocolo_vip.html [R=301,L]
+    
+    # Blog Posts Redirects
+    RewriteRule ^blog_activaciones_marca_btl\.html$ /blog/activaciones_marca_btl.html [R=301,L]
+    RewriteRule ^blog_anfitrionas_congresos\.html$ /blog/anfitrionas_congresos.html [R=301,L]
+    RewriteRule ^blog_anfitrionas_eventos\.html$ /blog/anfitrionas_eventos.html [R=301,L]
+    RewriteRule ^blog_anfitrionas_ferias\.html$ /blog/anfitrionas_ferias.html [R=301,L]
+    RewriteRule ^blog_anfitrionas_imagen\.html$ /blog/anfitrionas_imagen.html [R=301,L]
+    RewriteRule ^blog_animadores_marca_eventos\.html$ /blog/animadores_marca_eventos.html [R=301,L]
+    RewriteRule ^blog_checklist_contratar_staff\.html$ /blog/checklist_contratar_staff.html [R=301,L]
+    RewriteRule ^blog_coordinadores_eventos\.html$ /blog/coordinadores_eventos.html [R=301,L]
+    RewriteRule ^blog_diferencia_anfitrionas_promotoras\.html$ /blog/diferencia_anfitrionas_promotoras.html [R=301,L]
+    RewriteRule ^blog_maestros_ceremonia\.html$ /blog/maestros_ceremonia.html [R=301,L]
+    RewriteRule ^blog_modelos_profesionales\.html$ /blog/modelos_profesionales.html [R=301,L]
+    RewriteRule ^blog_personal_protocolo\.html$ /blog/personal_protocolo.html [R=301,L]
+    RewriteRule ^blog_precios_anfitrionas_peru\.html$ /blog/precios_anfitrionas_peru.html [R=301,L]
+    RewriteRule ^blog_promotores_venta\.html$ /blog/promotores_venta.html [R=301,L]
+    RewriteRule ^blog_sesion_fotos_profesional\.html$ /blog/sesion_fotos_profesional.html [R=301,L]
+    RewriteRule ^blog_uniformes_personalizados_anfitrionas\.html$ /blog/uniformes_personalizados_anfitrionas.html [R=301,L]
+    
+    # Utility Pages Redirects
+    RewriteRule ^casos_de_exito\.html$ /pages/casos_de_exito.html [R=301,L]
+    RewriteRule ^herramienta_calculadora_roi\.html$ /pages/herramienta_calculadora_roi.html [R=301,L]
+</IfModule>
+
+# ============================================
+# Headers de caché optimizados para mejor rendimiento
+# Configuración para Apache
+
+# HTTP/2 Server Push (si está disponible)
+<IfModule mod_http2.c>
+    H2Push on
+    H2PushPriority * after
+    H2PushPriority text/css before
+    H2PushPriority image/webp after 32
+</IfModule>
+
+<IfModule mod_expires.c>
+    ExpiresActive On
+    
+    # Imágenes - 1 año
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+    ExpiresByType image/vnd.microsoft.icon "access plus 1 year"
+    
+    # CSS y JavaScript - 1 mes
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType application/x-javascript "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+    
+    # Fuentes - 1 año
+    ExpiresByType font/ttf "access plus 1 year"
+    ExpiresByType font/otf "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType application/font-woff "access plus 1 year"
+    ExpiresByType application/font-woff2 "access plus 1 year"
+    
+    # HTML - 1 hora
+    ExpiresByType text/html "access plus 1 hour"
+    
+    # Data
+    ExpiresByType application/json "access plus 0 seconds"
+    ExpiresByType application/xml "access plus 0 seconds"
+    ExpiresByType text/xml "access plus 0 seconds"
+</IfModule>
+
+<IfModule mod_headers.c>
+    # Cache-Control para imágenes
+    <FilesMatch "\.(jpg|jpeg|png|gif|webp|svg|ico)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    
+    # Cache-Control para CSS y JS
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "public, max-age=2592000"
+    </FilesMatch>
+    
+    # Cache-Control para fuentes
+    <FilesMatch "\.(ttf|otf|woff|woff2)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    
+    # Cache-Control para HTML
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "public, max-age=3600, must-revalidate"
+    </FilesMatch>
+
+    # Permitir CORS para endpoints de API
+    <FilesMatch "\.(php)$">
+        <IfModule mod_headers.c>
+            Header set Access-Control-Allow-Methods "POST, OPTIONS"
+            Header set Access-Control-Allow-Headers "Content-Type, X-Requested-With"
+        </IfModule>
+    </FilesMatch>
+    
+    # Seguridad adicional
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # Strict-Transport-Security (requerido HTTPS)
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+    # Permissions-Policy: deshabilitar APIs no usadas
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=(), accelerometer=(), gyroscope=(), magnetometer=(), usb=(), payment=(), interest-cohort=()"
+
+
+    # Content-Security-Policy: política base compatible
+    Header always set Content-Security-Policy "default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://use.fontawesome.com; font-src 'self' https://fonts.gstatic.com https://use.fontawesome.com data:; script-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; upgrade-insecure-requests"
+</IfModule>
+
+# Compresión Gzip
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE text/javascript
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/x-javascript
+    AddOutputFilterByType DEFLATE application/json
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE image/svg+xml
+    AddOutputFilterByType DEFLATE font/ttf
+    AddOutputFilterByType DEFLATE font/otf
+    AddOutputFilterByType DEFLATE font/woff
+    AddOutputFilterByType DEFLATE font/woff2
+</IfModule>
+
+# Eliminar ETag
+<IfModule mod_headers.c>
+    Header unset ETag
+</IfModule>
+FileETag None
+
+# =============================
+# Endurecimiento de superficie
+# =============================
+
+# Desactivar listado de directorios
+Options -Indexes
+
+# Bloquear acceso a directorios sensibles
+RedirectMatch 404 ^/old/
+RedirectMatch 404 ^/node_modules/
+RedirectMatch 404 ^/\.git/
+
+# Bloquear acceso directo a archivos internos
+<FilesMatch "\.(md|ps1|backup|bak)$">
+    Require all denied
+</FilesMatch>

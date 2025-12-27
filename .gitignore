@@ -1,0 +1,35 @@
+# OS noise
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+tmp/
+.temp/
+.tmp/
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Backup artifacts
+*.backup-*
+
+# Build and coverage outputs
+dist/
+coverage/
+cache/
+
+# Dependencies
+node_modules/
+
+# Legacy archive
+old/

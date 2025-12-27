@@ -1,0 +1,53 @@
+# ============================================
+# Seguridad y Restricciones para /api/
+# ============================================
+
+# Desactivar listado de directorios
+Options -Indexes
+
+# Proteger archivos sensibles
+<FilesMatch "\.(env|md|sql|log|txt|bak|backup)$">
+    Require all denied
+</FilesMatch>
+
+# ============================================
+# Validación de Requests
+# ============================================
+
+# Solo permitir GET y POST
+<Limit GET POST>
+    Require all granted
+</Limit>
+
+<Limit PUT DELETE PATCH>
+    Require all denied
+</Limit>
+
+# ============================================
+# Prevención de Ataques
+# ============================================
+
+# Bloquear acceso directo a archivos específicos
+<Files "*.php">
+    <IfModule mod_headers.c>
+        Header set X-Content-Type-Options "nosniff"
+        Header set X-Frame-Options "DENY"
+        Header set X-XSS-Protection "1; mode=block"
+    </IfModule>
+</Files>
+
+# Bloquear acceso a .env
+<Files ".env">
+    Require all denied
+</Files>
+
+# ============================================
+# Performance y Cache
+# ============================================
+
+# No cachear respuestas de API
+<FilesMatch "\.php$">
+    Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+</FilesMatch>
