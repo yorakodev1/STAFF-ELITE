@@ -22,6 +22,7 @@ tmp/
 
 # Backup artifacts
 *.backup-*
+*.md.backup-*
 
 # Build and coverage outputs
 dist/
@@ -30,6 +31,9 @@ cache/
 
 # Dependencies
 node_modules/
+
+# Claude artifacts
+.claude/
 
 # Legacy archive
 old/
