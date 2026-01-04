@@ -1,0 +1,24 @@
+# robots.txt para Staff Elite Perú
+# Generado: 2025-12-31
+
+User-agent: *
+Allow: /
+
+# Permitir crawling de recursos estáticos
+Allow: /assets/
+Allow: /api/
+
+# Disallow carpetas de desarrollo y respaldos
+Disallow: /old/
+Disallow: /*.backup*
+Disallow: /*.backup-*
+
+# Archivos de prueba
+Disallow: /test-proxy.html
+
+# Archivos de documentación
+Disallow: /*.md
+Disallow: /*.md.backup*
+
+# Sitemap
+Sitemap: https://staffeliteperu.com/sitemap.xml

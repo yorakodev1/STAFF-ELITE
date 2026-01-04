@@ -5,36 +5,73 @@
     RewriteEngine On
     RewriteBase /
     
-    # Landing Pages Redirects
-    RewriteRule ^landing_anfitrionas_lima\.html$ /landing/anfitrionas_lima.html [R=301,L]
-    RewriteRule ^landing_anfitrionas_peru\.html$ /landing/anfitrionas_peru.html [R=301,L]
-    RewriteRule ^landing_anfitrionas_peru_mobile_optimized\.html$ /landing/anfitrionas_peru_mobile_optimized.html [R=301,L]
-    RewriteRule ^landing_anfitrionas_trujillo\.html$ /landing/anfitrionas_trujillo.html [R=301,L]
-    RewriteRule ^landing_promotoras_arequipa\.html$ /landing/promotoras_arequipa.html [R=301,L]
-    RewriteRule ^landing_promotoras_btl\.html$ /landing/promotoras_btl.html [R=301,L]
-    RewriteRule ^landing_protocolo_vip\.html$ /landing/protocolo_vip.html [R=301,L]
+    # ============================================
+    # REDIRECTS UNDERSCORE → HYPHEN (SEO FIX 2025-12-31)
+    # ============================================
     
-    # Blog Posts Redirects
-    RewriteRule ^blog_activaciones_marca_btl\.html$ /blog/activaciones_marca_btl.html [R=301,L]
-    RewriteRule ^blog_anfitrionas_congresos\.html$ /blog/anfitrionas_congresos.html [R=301,L]
-    RewriteRule ^blog_anfitrionas_eventos\.html$ /blog/anfitrionas_eventos.html [R=301,L]
-    RewriteRule ^blog_anfitrionas_ferias\.html$ /blog/anfitrionas_ferias.html [R=301,L]
-    RewriteRule ^blog_anfitrionas_imagen\.html$ /blog/anfitrionas_imagen.html [R=301,L]
-    RewriteRule ^blog_animadores_marca_eventos\.html$ /blog/animadores_marca_eventos.html [R=301,L]
-    RewriteRule ^blog_checklist_contratar_staff\.html$ /blog/checklist_contratar_staff.html [R=301,L]
-    RewriteRule ^blog_coordinadores_eventos\.html$ /blog/coordinadores_eventos.html [R=301,L]
-    RewriteRule ^blog_diferencia_anfitrionas_promotoras\.html$ /blog/diferencia_anfitrionas_promotoras.html [R=301,L]
-    RewriteRule ^blog_maestros_ceremonia\.html$ /blog/maestros_ceremonia.html [R=301,L]
-    RewriteRule ^blog_modelos_profesionales\.html$ /blog/modelos_profesionales.html [R=301,L]
-    RewriteRule ^blog_personal_protocolo\.html$ /blog/personal_protocolo.html [R=301,L]
-    RewriteRule ^blog_precios_anfitrionas_peru\.html$ /blog/precios_anfitrionas_peru.html [R=301,L]
-    RewriteRule ^blog_promotores_venta\.html$ /blog/promotores_venta.html [R=301,L]
-    RewriteRule ^blog_sesion_fotos_profesional\.html$ /blog/sesion_fotos_profesional.html [R=301,L]
-    RewriteRule ^blog_uniformes_personalizados_anfitrionas\.html$ /blog/uniformes_personalizados_anfitrionas.html [R=301,L]
+    # Landing Pages: underscores → hyphens
+    RewriteRule ^landing/anfitrionas_peru\.html$ /landing/anfitrionas-peru.html [R=301,L]
+    RewriteRule ^landing/anfitrionas_lima\.html$ /landing/anfitrionas-lima.html [R=301,L]
+    RewriteRule ^landing/anfitrionas_trujillo\.html$ /landing/anfitrionas-trujillo.html [R=301,L]
+    RewriteRule ^landing/promotoras_arequipa\.html$ /landing/promotoras-arequipa.html [R=301,L]
+    RewriteRule ^landing/promotoras_btl\.html$ /landing/promotoras-btl.html [R=301,L]
+    RewriteRule ^landing/protocolo_vip\.html$ /landing/protocolo-vip.html [R=301,L]
     
-    # Utility Pages Redirects
-    RewriteRule ^casos_de_exito\.html$ /pages/casos_de_exito.html [R=301,L]
-    RewriteRule ^herramienta_calculadora_roi\.html$ /pages/herramienta_calculadora_roi.html [R=301,L]
+    # Blog Posts: underscores → hyphens
+    RewriteRule ^blog/activaciones_marca_btl\.html$ /blog/activaciones-marca-btl.html [R=301,L]
+    RewriteRule ^blog/anfitrionas_congresos\.html$ /blog/anfitrionas-congresos.html [R=301,L]
+    RewriteRule ^blog/anfitrionas_eventos\.html$ /blog/anfitrionas-eventos.html [R=301,L]
+    RewriteRule ^blog/anfitrionas_ferias\.html$ /blog/anfitrionas-ferias.html [R=301,L]
+    RewriteRule ^blog/anfitrionas_imagen\.html$ /blog/anfitrionas-imagen.html [R=301,L]
+    RewriteRule ^blog/animadores_marca_eventos\.html$ /blog/animadores-marca-eventos.html [R=301,L]
+    RewriteRule ^blog/checklist_contratar_staff\.html$ /blog/checklist-contratar-staff.html [R=301,L]
+    RewriteRule ^blog/coordinadores_eventos\.html$ /blog/coordinadores-eventos.html [R=301,L]
+    RewriteRule ^blog/diferencia_anfitrionas_promotoras\.html$ /blog/diferencia-anfitrionas-promotoras.html [R=301,L]
+    RewriteRule ^blog/maestros_ceremonia\.html$ /blog/maestros-ceremonia.html [R=301,L]
+    RewriteRule ^blog/modelos_profesionales\.html$ /blog/modelos-profesionales.html [R=301,L]
+    RewriteRule ^blog/personal_protocolo\.html$ /blog/personal-protocolo.html [R=301,L]
+    RewriteRule ^blog/precios_anfitrionas_peru\.html$ /blog/precios-anfitrionas-peru.html [R=301,L]
+    RewriteRule ^blog/promotores_venta\.html$ /blog/promotores-venta.html [R=301,L]
+    RewriteRule ^blog/sesion_fotos_profesional\.html$ /blog/sesion-fotos-profesional.html [R=301,L]
+    RewriteRule ^blog/uniformes_personalizados_anfitrionas\.html$ /blog/uniformes-personalizados-anfitrionas.html [R=301,L]
+    
+    # Pages: underscores → hyphens
+    RewriteRule ^pages/casos_de_exito\.html$ /pages/casos-de-exito.html [R=301,L]
+    RewriteRule ^pages/herramienta_calculadora_roi\.html$ /pages/herramienta-calculadora-roi.html [R=301,L]
+    
+    # ============================================
+    # REDIRECTS ANTIGUOS (Restructuración de directorios)
+    # ============================================
+    
+    # Landing Pages Redirects (root → /landing/)
+    RewriteRule ^landing_anfitrionas_lima\.html$ /landing/anfitrionas-lima.html [R=301,L]
+    RewriteRule ^landing_anfitrionas_peru\.html$ /landing/anfitrionas-peru.html [R=301,L]
+    RewriteRule ^landing_anfitrionas_trujillo\.html$ /landing/anfitrionas-trujillo.html [R=301,L]
+    RewriteRule ^landing_promotoras_arequipa\.html$ /landing/promotoras-arequipa.html [R=301,L]
+    RewriteRule ^landing_promotoras_btl\.html$ /landing/promotoras-btl.html [R=301,L]
+    RewriteRule ^landing_protocolo_vip\.html$ /landing/protocolo-vip.html [R=301,L]
+    
+    # Blog Posts Redirects (root → /blog/ con hyphens)
+    RewriteRule ^blog_activaciones_marca_btl\.html$ /blog/activaciones-marca-btl.html [R=301,L]
+    RewriteRule ^blog_anfitrionas_congresos\.html$ /blog/anfitrionas-congresos.html [R=301,L]
+    RewriteRule ^blog_anfitrionas_eventos\.html$ /blog/anfitrionas-eventos.html [R=301,L]
+    RewriteRule ^blog_anfitrionas_ferias\.html$ /blog/anfitrionas-ferias.html [R=301,L]
+    RewriteRule ^blog_anfitrionas_imagen\.html$ /blog/anfitrionas-imagen.html [R=301,L]
+    RewriteRule ^blog_animadores_marca_eventos\.html$ /blog/animadores-marca-eventos.html [R=301,L]
+    RewriteRule ^blog_checklist_contratar_staff\.html$ /blog/checklist-contratar-staff.html [R=301,L]
+    RewriteRule ^blog_coordinadores_eventos\.html$ /blog/coordinadores-eventos.html [R=301,L]
+    RewriteRule ^blog_diferencia_anfitrionas_promotoras\.html$ /blog/diferencia-anfitrionas-promotoras.html [R=301,L]
+    RewriteRule ^blog_maestros_ceremonia\.html$ /blog/maestros-ceremonia.html [R=301,L]
+    RewriteRule ^blog_modelos_profesionales\.html$ /blog/modelos-profesionales.html [R=301,L]
+    RewriteRule ^blog_personal_protocolo\.html$ /blog/personal-protocolo.html [R=301,L]
+    RewriteRule ^blog_precios_anfitrionas_peru\.html$ /blog/precios-anfitrionas-peru.html [R=301,L]
+    RewriteRule ^blog_promotores_venta\.html$ /blog/promotores-venta.html [R=301,L]
+    RewriteRule ^blog_sesion_fotos_profesional\.html$ /blog/sesion-fotos-profesional.html [R=301,L]
+    RewriteRule ^blog_uniformes_personalizados_anfitrionas\.html$ /blog/uniformes-personalizados-anfitrionas.html [R=301,L]
+    
+    # Utility Pages Redirects (root → /pages/ con hyphens)
+    RewriteRule ^casos_de_exito\.html$ /pages/casos-de-exito.html [R=301,L]
+    RewriteRule ^herramienta_calculadora_roi\.html$ /pages/herramienta-calculadora-roi.html [R=301,L]
 </IfModule>
 
 # ============================================
