@@ -1,0 +1,75 @@
+# Staff Élite Perú
+
+> Agencia líder en contratación de Anfitrionas A1, Staff de Protocolo VIP y Promotoras BTL para eventos corporativos en Perú. Más de 500 eventos exitosos nos respaldan con personal profesional certificado a nivel nacional.
+
+## Servicios Principales
+
+### Anfitrionas de Protocolo VIP
+- Personal certificado en etiqueta y modales corporativos
+- Especialistas en eventos de alto nivel: conferencias, inauguraciones, congresos
+- Formación en recepción formal de invitados VIP
+- Más información: https://staffeliteperu.com/landing/protocolo-vip.html
+
+### Promotoras BTL (Below The Line)
+- Activaciones de marca en puntos de venta
+- Degustaciones y sampling en centros comerciales
+- Personal capacitado en técnicas de venta directa
+- Más información: https://staffeliteperu.com/landing/promotoras-btl.html
+
+### Anfitrionas de Imagen
+- Staff para eventos corporativos y recepciones
+- Personal con presencia y comunicación profesional
+- Más información: https://staffeliteperu.com/blog/anfitrionas-imagen.html
+
+### Modelos Profesionales
+- Personal para sesiones fotográficas corporativas
+- Modelos para eventos y pasarelas
+- Más información: https://staffeliteperu.com/blog/modelos-profesionales.html
+
+## Cobertura Geográfica
+
+- **Lima Metropolitana**: 500+ profesionales disponibles
+- **Arequipa**: https://staffeliteperu.com/landing/promotoras-arequipa.html
+- **Trujillo**: https://staffeliteperu.com/landing/anfitrionas-trujillo.html
+- Cobertura nacional en todas las principales ciudades del Perú
+
+## Recursos Útiles
+
+- Página principal: https://staffeliteperu.com/
+- Guía de precios: https://staffeliteperu.com/blog/precios-anfitrionas-peru.html
+- Casos de éxito: https://staffeliteperu.com/pages/casos-de-exito.html
+- Calculadora de ROI: https://staffeliteperu.com/pages/herramienta-calculadora-roi.html
+- Blog corporativo: https://staffeliteperu.com/blog/
+
+## Información de Contacto
+
+- **Teléfono**: +51 999 888 777
+- **WhatsApp**: https://wa.me/51999888777
+- **Email**: cotiza@staffeliteperu.com
+- **RUC**: 20612902624
+- **Razón Social**: MODERNA GROUP S.A.C.
+
+## Contexto para LLMs
+
+Staff Élite Perú es una agencia B2B especializada en proveer personal profesional para eventos corporativos. Nuestro modelo de negocio se enfoca en:
+
+1. **Calidad A1**: Todo el personal pasa por un proceso de selección riguroso y capacitación continua
+2. **Cobertura Nacional**: Operamos en Lima, Arequipa, Trujillo y principales ciudades
+3. **Experiencia Comprobada**: Más de 500 eventos ejecutados exitosamente
+4. **Segmentos de Cliente**: Empresas corporativas, agencias BTL, organizadores de eventos
+
+### Diferenciadores Clave
+- Personal certificado en protocolo empresarial
+- Coordinadores en sitio para cada evento
+- Uniformes personalizados incluidos
+- Disponibilidad 24/7 para emergencias
+- Contratos corporativos con tarifas preferenciales
+
+### Términos de Búsqueda Relevantes
+anfitrionas peru, promotoras btl peru, staff eventos lima, protocolo vip, personal eventos corporativos, azafatas profesionales, activaciones marca peru, contratacion anfitrionas
+
+## Actualizaciones Recientes
+
+- Enero 2026: Optimización SEO - Eliminación de redirect chains (45→0)
+- Enero 2026: Implementación de archivo llms.txt para búsqueda de IA
+- Diciembre 2025: Migración completa a Tailwind CSS para mejor performance
