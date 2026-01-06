@@ -139,6 +139,14 @@ if ($request_size > 4096) {
 
 $api_url = 'https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key=' . urlencode($api_key);
 
+// Obtener el referer original del cliente
+$referer = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
+if (empty($referer)) {
+    // Si no hay referer, usar el origin o construir uno basado en el host
+    $referer = isset($_SERVER['HTTP_ORIGIN']) ? $_SERVER['HTTP_ORIGIN'] : 
+               (isset($_SERVER['HTTP_HOST']) ? 'https://' . $_SERVER['HTTP_HOST'] : 'https://staffeliteperu.com');
+}
+
 $ch = curl_init($api_url);
 
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -146,7 +154,8 @@ curl_setopt($ch, CURLOPT_POST, true);
 curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($input));
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
     'Content-Type: application/json',
-    'User-Agent: Staff-Elite-Peru/1.0'
+    'User-Agent: Staff-Elite-Peru/1.0',
+    'Referer: ' . $referer
 ]);
 curl_setopt($ch, CURLOPT_TIMEOUT, 30);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
