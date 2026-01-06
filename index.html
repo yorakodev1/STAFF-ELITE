@@ -723,17 +723,33 @@
       <div class="container w-full relative z-10">
          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <!-- Left Content with White Vertical Bar -->
-            <div class="text-white pl-0 lg:pl-8">
-               <div class="border-l-4 border-white pl-8">
-                  <!-- Social Links - Vertical (Left side on mobile, integrated on larger screens) -->
-                  <div class="flex flex-row lg:flex-col gap-4 mb-8 -ml-6 lg:ml-0 lg:absolute lg:left-0 lg:top-1/2 lg:transform lg:-translate-y-1/2">
+            <div class="text-white relative pl-12 lg:pl-16">
+               <!-- Social Links: visible en mobile como fila -->
+               <div class="flex lg:hidden gap-4 mb-6">
+                  <a href="https://wa.me/51960355574" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center text-lg hover:bg-white hover:text-blue-600 transition">
+                     <i class="fab fa-whatsapp"></i>
+                  </a>
+                  <a href="https://www.facebook.com/staffeliteperu" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center text-lg hover:bg-white hover:text-blue-600 transition">
+                     <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="https://www.instagram.com/staffeliteperu" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center text-lg hover:bg-white hover:text-blue-600 transition">
+                     <i class="fab fa-instagram"></i>
+                  </a>
+               </div>
+
+               <div class="border-l-4 border-white pl-8 relative">
+                  <!-- Social Links: en desktop, fuera de la línea -->
+                  <div class="hidden lg:flex flex-col gap-4 absolute -left-16 top-1/2 transform -translate-y-1/2">
+                     <a href="https://wa.me/51960355574" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center text-lg hover:bg-white hover:text-blue-600 transition">
+                        <i class="fab fa-whatsapp"></i>
+                     </a>
                      <a href="https://www.facebook.com/staffeliteperu" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center text-lg hover:bg-white hover:text-blue-600 transition">
                         <i class="fab fa-facebook-f"></i>
                      </a>
                      <a href="https://www.instagram.com/staffeliteperu" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center text-lg hover:bg-white hover:text-blue-600 transition">
                         <i class="fab fa-instagram"></i>
                      </a>
-                  <a href="https://wa.me/51960355574" target="_blank" rel="noopener noreferrer" class="w-12 h-12 rounded-full border-2 border-white flex items-center justify-center text-lg hover:bg-white hover:text-blue-600 transition">
+                  </div>
 
                   <h1 class="text-5xl lg:text-6xl xl:text-7xl font-black mb-6 leading-tight" style="color: white; text-shadow: 2px 2px 8px rgba(0,0,0,0.3);">
                      ANFITRIONAS Y <br class="hidden md:block"> PROMOTORAS<br class="hidden md:block"> BTL
@@ -865,7 +881,7 @@
                <!-- Stat 3: Satisfacción -->
                <div class="text-center p-6 bg-blue-50 rounded-lg">
                   <div class="text-5xl text-blue-600 mb-4 flex justify-center">
-                     <i class="fas fa-star"></i>
+                     <i class="fas fa-smile"></i>
                   </div>
                   <p class="text-3xl font-bold text-gray-900 mb-2">98%</p>
                   <p class="text-gray-600 font-medium">Satisfacción de Clientes</p>
@@ -874,7 +890,7 @@
                <!-- Stat 4: Disponibilidad -->
                <div class="text-center p-6 bg-blue-50 rounded-lg">
                   <div class="text-5xl text-blue-600 mb-4 flex justify-center">
-                     <i class="fas fa-headset"></i>
+                     <i class="fas fa-clock"></i>
                   </div>
                   <p class="text-3xl font-bold text-gray-900 mb-2">24/7</p>
                   <p class="text-gray-600 font-medium">Disponibilidad</p>
