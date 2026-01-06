@@ -23,6 +23,7 @@ tmp/
 # Backup artifacts
 *.backup-*
 *.md.backup-*
+backups/
 
 # Documentation files
 *.md
