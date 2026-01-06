@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&display=swap');
 
 html{
     scroll-behavior: smooth;
@@ -767,7 +767,7 @@ transform: scale(1.04);
     background: -moz-linear-gradient(left, var(--accent) 0%, var(--button-color) 100%);
     background: -webkit-linear-gradient(left, var(--accent) 0%, var(--button-color) 100%);
     background: linear-gradient(to right, var(--accent) 0%, var(--button-color) 100%);
-    
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5ec2f2', endColorstr='#0d6efd',GradientType=1 );
     padding-top: 151px;
     padding-bottom: 35px;
 }
@@ -1087,9 +1087,9 @@ transform: scale(1.04);
     height: 100%;
     background-color: black;
     z-index: 1001;
-    
+    -moz-opacity: 0.8;
     opacity: .80;
-    
+    filter: alpha(opacity=80);
   }
   
   #light {
@@ -1123,7 +1123,7 @@ transform: scale(1.04);
 }
   
   .boxclose:before {
-    content: "Ã—";
+    content: "×";
   }
   
   #fade:hover ~ #boxclose {
@@ -1524,10 +1524,10 @@ transform: scale(1.04);
     display: block;
     visibility: visible;
     opacity: 0.55;
-    
-    
-    
-    
+    -moz-opacity: 0.55;
+    -webkit-opacity: 0.55;
+    filter: alpha(opacity=65);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=65)";
 }
 
 /*Zoom Button*/
@@ -1540,10 +1540,10 @@ transform: scale(1.04);
     color: #fff !important;
     text-align: center;
     opacity: 1;
-    
-    
-    
-    
+    -moz-opacity: 1;
+    -webkit-opacity: 1;
+    filter: alpha(opacity=1);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
 }
 #lightbox .modal-content {
     display: inline-block;
