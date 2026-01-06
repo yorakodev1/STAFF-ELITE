@@ -1904,6 +1904,7 @@ Descripción del evento del usuario: "${description}"`;
 
             // Adaptar a la estructura que devuelve Gemini (variantes comunes)
             const analisis = pickFlex(idx, [
+               'AnalisisEvento',
                'analisis_evento',
                'analisis_del_evento',
                'analisis',
@@ -1911,12 +1912,14 @@ Descripción del evento del usuario: "${description}"`;
             ], '');
 
             const personalHTML = pickFlex(idx, [
+               'PersonalRecomendado',
                'personal_recomendado',
                'personal',
                'staff_recomendado'
             ], '');
 
             const responsabilidades = pickFlex(idx, [
+               'ResponsabilidadesClave',
                'responsabilidades_clave',
                'responsabilidades',
                'acciones',
@@ -1925,6 +1928,7 @@ Descripción del evento del usuario: "${description}"`;
             ], {});
 
             const tipPro = pickFlex(idx, [
+               'EjemploCreativo',
                'ejemplo_creativo_y_detallado',
                'ejemplo_creativo',
                'ejemplo_exito_creativo',
